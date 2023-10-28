@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Registration</title> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<style>
+    body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(45deg, #3498db, #e74c3c);
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            margin: 0;
+        }
+
+    .dashboard-container {
+        max-width: 1200px;
+        margin: 20px auto;
+        padding: 40px;
+        background-color: #f9f9f9;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+        border: 1px solid #e1e1e1;
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        position: relative;
+    }
+
+    h1 {
+        text-align: center;
+        margin-bottom: 20px;
+        color: #333;
+        font-size: 32px;
+    }
+
+    form {
+        margin: 20px auto;
+        max-width: 320px;
+        text-align: center;
+    }
+
+    label {
+        font-weight: bold;
+        margin-bottom: 10px;
+    }
+
+    input[type="text"],
+    input[type="password"],
+    select {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        background-color: #f9f9f9;
+    }
+
+    select {
+        appearance: none;
+    }
+
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        padding: 12px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        cursor: pointer;
+    }
+
+    input[type="submit"]:hover {
+        background-color: #0056b3;
+    }
+
+    select-wrapper {
+        position: relative;
+    }
+
+    select-wrapper select {
+        padding-right: 30px;
+    }
+
+    select-wrapper i {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        transform: translateY(-50%);
+        pointer-events: none;
+        color: #555;
+    }
+
+
+    
+
+</style>
+</head>
+<body>
+    
+<div class="dashboard-container">
+    <h1>User Registration</h1>
+    <form method="POST" action="/register">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required><br><br>
+
+
+        <label for="password">Full Name:</label>
+        <input type="text" id="fullname" name="fullname" required><br><br>
+
+
+        <label for="role">Role:</label>
+        <select id="role" name="role" required>
+            <option value="ADMIN">ADMIN</option>
+            <option value="ACCOUNTING SUPERVISOR">ACCOUNTING SUPERVISOR</option>
+            <option value="ACCOUNTS PAYABLE SPECIALIST">ACCOUNTS PAYABLE SPECIALIST</option>
+            <option value="AFTER SALES SUPPORT SUPERVISOR">AFTER SALES SUPPORT SUPERVISOR</option>
+            <option value="APPLICATIONS AND MARKETING HEAD">APPLICATIONS AND MARKETING HEAD</option>
+            <option value="AUDIT SPECIALIST">AUDIT SPECIALIST</option>
+            <option value="BRANCH ADMINISTRATIVE SUPERVISOR">BRANCH ADMINISTRATIVE SUPERVISOR</option>
+            <option value="BILLING SPECIALIST">BILLING SPECIALIST CDO</option>
+            <option value="BILLING SPECIALIST">BILLING SPECIALIST DVO</option>
+            <option value="BOOKKEEPER">BOOKKEEPER</option>
+            <option value="COMPANY DRIVER">COMPANY DRIVER</option>
+            <option value="CREDIT AND COLLECTION SPECIALIST">CREDIT AND COLLECTION SPECIALIST</option>
+            <option value="CREDIT AND COLLECTION SUPERVISOR">CREDIT AND COLLECTION SUPERVISOR</option>
+            <option value="FIELD AUDITOR">FIELD AUDITOR</option>
+            <option value="FIELD COLLECTOR">FIELD COLLECTOR</option>
+            <option value="HR ASSISTANT">HR ASSISTANT</option>
+            <option value="HR MANAGER">HR MANAGER</option>
+            <option value="IMAGING HEAD">IMAGING HEAD</option>
+            <option value="IMAGING SPECIALIST">IMAGING SPECIALIST</option>
+            <option value="IT ADMINISTRATOR">IT ADMINISTRATOR</option>
+            <option value="IT SPECIALIST - SALES">IT SPECIALIST SALES</option>
+            <option value="IT SPECIALIST ADMIN">IT SPECIALIST ADMIN</option>
+            <option value="LIASON OFFICER">LIASON OFFICER</option>
+            <option value="LOGISTICS CREW">LOGISTICS CREW</option>
+            <option value="LOGISTICS SPECIALIST">LOGISTICS SPECIALIST</option>
+            <option value="OPERATIONS SUPERVISOR">OPERATIONS SUPERVISOR</option>
+            <option value="PENDING ORDER SPECIALIST">PENDING ORDER SPECIALIST</option>
+            <option value="PROCUREMENT SPECIALIST">PROCUREMENT SPECIALIST</option>
+            <option value="PROCUREMENT SUPERVISOR">PROCUREMENT SUPERVISOR</option>
+            <option value="PROFESSIONAL SALES AND SERVICE REPRESENTATIVE">PROFESSIONAL SALES AND SERVICE REPRESENTATIVE</option>
+            <option value="PROFESSIONAL SALES AND SERVICE REPRESENTATIVE T2">PROFESSIONAL SALES AND SERVICE REPRESENTATIVE T2</option>
+            <option value="REPAIR AND VEHICLE MAINTENANCE SPECIALIST">REPAIR AND VEHICLE MAINTENANCE SPECIALIST</option>
+            <option value="FIELD SALES SUPERVISOR T1CDO">FIELD SALES SUPERVISOR T1CDO</option>
+            <option value="FIELD SALES SUPERVISOR T2DVO">FIELD SALES SUPERVISOR T2DVO</option>
+            <option value="SALES COORDINATOR CDO">SALES COORDINATOR CDO</option>
+            <option value="SALES COORDINATOR DVO">SALES COORDINATOR DVO</option>
+            <option value="SALES OPERATION SPECIALIST">SALES OPERATION SPECIALIST</option>
+            <option value="SALES SUPERVISOR">SALES SUPERVISOR</option>
+            <option value="SERVICE TECHNICIAN">SERVICE TECHNICIAN</option>
+            <option value="UTILITY PERSONNEL">UTILITY PERSONNEL</option>
+            <option value="VP-FINANCE">VP-FINANCE</option>
+            <option value="WAREHOUSE SUPERVISOR">WAREHOUSE SUPERVISOR</option>
+            <option value="PSSR ASOK">PSSR ASOK</option>
+        </select><br><br>
+
+        <input type="submit" value="Register">
+    </form>
+</div>
+
+
+    <script>
+        // JavaScript for handling the dropdown button
+        document.querySelector('.dropdown-button').addEventListener('click', function() {
+            const dropdownContent = document.querySelector('.dropdown-content');
+            dropdownContent.style.display = (dropdownContent.style.display === 'block') ? 'none' : 'block';
+        });
+    </script>
+</body>
+</html>
